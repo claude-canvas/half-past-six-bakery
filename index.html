@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Half Past Six — neighbourhood bakery</title>
+<meta name="description" content="A small bakery working with slow ferments and stone-milled flour. Fresh bread out of the oven from half past six every morning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <a class="wordmark" href="#top">Half&nbsp;Past&nbsp;Six</a>
+  <nav class="nav">
+    <a href="#bake">Today's bake</a>
+    <a href="#counter">At the counter</a>
+    <a href="#visit">Visit</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-words">
+      <h1>Bread comes out<br>at half past six.</h1>
+      <p class="standfirst">
+        We mill our own flour, ferment slowly, and bake in a single deck oven
+        on Ganeshkhind Road. Everything is gone by late afternoon, which is
+        rather the point.
+      </p>
+      <a class="button" href="#bake">See what's baking</a>
+    </div>
+
+    <div class="hero-schedule" id="bake">
+      <h2 class="schedule-title">Out of the oven</h2>
+      <ol class="schedule" id="schedule">
+        <li data-mins="390">
+          <span class="time">6:30</span>
+          <span class="loaf">Country sourdough</span>
+        </li>
+        <li data-mins="420">
+          <span class="time">7:00</span>
+          <span class="loaf">Butter croissants</span>
+        </li>
+        <li data-mins="450">
+          <span class="time">7:30</span>
+          <span class="loaf">Seeded rye</span>
+        </li>
+        <li data-mins="540">
+          <span class="time">9:00</span>
+          <span class="loaf">Cardamom buns</span>
+        </li>
+        <li data-mins="660">
+          <span class="time">11:00</span>
+          <span class="loaf">Focaccia, rosemary and salt</span>
+        </li>
+        <li data-mins="900">
+          <span class="time">3:00</span>
+          <span class="loaf">Second sourdough bake</span>
+        </li>
+      </ol>
+      <p class="schedule-note" id="schedule-note">Times shift by a few minutes. Dough decides.</p>
+    </div>
+  </section>
+
+  <section class="counter" id="counter">
+    <h2>At the counter</h2>
+    <div class="goods">
+      <article class="good">
+        <h3>Country sourdough</h3>
+        <p>Stone-milled wheat, 30 hour ferment, baked dark. A whole loaf keeps four days in paper.</p>
+        <p class="price">₹180 — whole loaf</p>
+      </article>
+      <article class="good">
+        <h3>Butter croissants</h3>
+        <p>Laminated over three days with cultured butter. We make ninety a morning and stop there.</p>
+        <p class="price">₹90 — each</p>
+      </article>
+      <article class="good">
+        <h3>Seeded rye</h3>
+        <p>Sunflower, flax and pumpkin through a dense dark crumb. Best sliced thin.</p>
+        <p class="price">₹220 — whole loaf</p>
+      </article>
+      <article class="good">
+        <h3>Cardamom buns</h3>
+        <p>Hand-knotted, ground cardamom, pearl sugar on top. Warm until about eleven.</p>
+        <p class="price">₹70 — each</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="visit-panel">
+      <h2>Visit</h2>
+      <p class="address">
+        14 Ganeshkhind Road<br>
+        Shivajinagar, Pune 411005
+      </p>
+      <p class="tel"><a href="tel:+912025530014">020 2553 0014</a></p>
+    </div>
+    <div class="visit-panel">
+      <h2>Hours</h2>
+      <dl class="hours">
+        <dt>Tuesday to Friday</dt><dd>6:30 — 18:00</dd>
+        <dt>Saturday</dt><dd>6:30 — 16:00</dd>
+        <dt>Sunday</dt><dd>7:00 — 13:00</dd>
+        <dt>Monday</dt><dd>Closed. The oven rests.</dd>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Half Past Six, Pune. Baking daily since 2019.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
