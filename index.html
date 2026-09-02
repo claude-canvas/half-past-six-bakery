@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Half Past Six — neighbourhood bakery</title>
-<meta name="description" content="A small bakery working with slow ferments and stone-milled flour. Bread from half past six, cakes cut to order, on Ganeshkhind Road in Pune.">
+<title>Half Past Six — cakes and bread, Pune</title>
+<meta name="description" content="Small bakery on Ganeshkhind Road. Cakes cut to order, bread from half past six.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
@@ -13,11 +13,15 @@
 </head>
 <body>
 
+<div class="bloom bloom-a" aria-hidden="true"></div>
+<div class="bloom bloom-b" aria-hidden="true"></div>
+<div class="bloom bloom-c" aria-hidden="true"></div>
+
 <header class="masthead">
   <a class="wordmark" href="#top">Half&nbsp;Past&nbsp;Six</a>
   <nav class="nav">
-    <a href="#bake">Today's bake</a>
     <a href="#cakes">Cakes</a>
+    <a href="#gallery">Counter</a>
     <a href="#menu">Menu</a>
     <a href="#visit">Visit</a>
   </nav>
@@ -26,71 +30,52 @@
 <main id="top">
 
   <section class="hero">
-    <div class="hero-words">
-      <h1>Bread comes out<br>at half past six.</h1>
-      <p class="standfirst">
-        We mill our own flour, ferment slowly, and bake in a single deck oven
-        on Ganeshkhind Road. Everything is gone by late afternoon, which is
-        rather the point.
-      </p>
-      <a class="button" href="#bake">See what's baking</a>
+    <div class="hero-words reveal">
+      <h1>Sugar,<br>butter,<br>fire.</h1>
+      <p>Cakes cut to order. Bread at 6:30.</p>
+      <a class="button" href="#cakes">See the cakes</a>
     </div>
 
-    <div class="hero-schedule" id="bake">
-      <h2 class="schedule-title">Out of the oven</h2>
-      <ol class="schedule" id="schedule">
-        <li data-mins="390"><span class="time">6:30</span><span class="loaf">Country sourdough</span></li>
-        <li data-mins="420"><span class="time">7:00</span><span class="loaf">Butter croissants</span></li>
-        <li data-mins="450"><span class="time">7:30</span><span class="loaf">Seeded rye</span></li>
-        <li data-mins="540"><span class="time">9:00</span><span class="loaf">Cardamom buns</span></li>
-        <li data-mins="660"><span class="time">11:00</span><span class="loaf">Focaccia, rosemary and salt</span></li>
-        <li data-mins="900"><span class="time">3:00</span><span class="loaf">Second sourdough bake</span></li>
-      </ol>
-      <p class="schedule-note" id="schedule-note">Times shift by a few minutes. Dough decides.</p>
-    </div>
+    <figure class="hero-shot reveal juggle">
+      <img src="https://images.unsplash.com/photo-1712725213053-dad649077a02?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+           alt="Layered honey cake cut to show the crumb" width="1200" height="800" loading="eager">
+    </figure>
   </section>
 
-  <!-- ---------- cake carousel ---------- -->
+  <!-- carousel -->
   <section class="cakes" id="cakes" aria-labelledby="cakes-heading">
-    <div class="cakes-head">
-      <h2 id="cakes-heading">The cake counter</h2>
-      <p>Cut to order by the slice, or ask us the day before for a whole one.</p>
-    </div>
+    <h2 id="cakes-heading" class="reveal">The cake counter</h2>
 
     <div class="carousel" id="carousel">
       <div class="viewport">
         <ul class="track" id="track">
           <li class="slide">
-            <img src="https://images.unsplash.com/photo-1712725213053-dad649077a02?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Layered cream cake cut open to show the crumb" loading="eager" width="1400" height="933">
-            <div class="caption"><h3>Honey layer cake</h3><p>Nine thin layers, burnt honey cream, a day's rest before it's cut.</p></div>
+            <img src="https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Slice of chocolate cake with a fork" width="1400" height="933" loading="eager">
+            <div class="caption"><h3>Dark chocolate</h3><p>70%, barely sweet</p></div>
           </li>
           <li class="slide">
-            <img src="https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Slice of chocolate cake on a plate with a fork" loading="lazy" width="1400" height="933">
-            <div class="caption"><h3>Dark chocolate</h3><p>70% couverture, ganache between the layers, barely sweet.</p></div>
+            <img src="https://images.unsplash.com/photo-1551879400-111a9087cd86?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Slice of strawberry cake" width="1400" height="933" loading="lazy">
+            <div class="caption"><h3>Strawberry</h3><p>In season only</p></div>
           </li>
           <li class="slide">
-            <img src="https://images.unsplash.com/photo-1551879400-111a9087cd86?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Slice of strawberry cake on a plate" loading="lazy" width="1400" height="933">
-            <div class="caption"><h3>Strawberry and cream</h3><p>Only while Mahabaleshwar strawberries are in. Usually gone by noon.</p></div>
+            <img src="https://images.unsplash.com/photo-1582716401301-b2407dc7563d?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Slice of cake topped with a cherry" width="1400" height="933" loading="lazy">
+            <div class="caption"><h3>Sour cherry</h3><p>Kirsch syrup</p></div>
           </li>
           <li class="slide">
-            <img src="https://images.unsplash.com/photo-1582716401301-b2407dc7563d?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Slice of cake topped with a cherry" loading="lazy" width="1400" height="933">
-            <div class="caption"><h3>Sour cherry</h3><p>Kirsch in the syrup, cherries stewed in-house, cream barely sweetened.</p></div>
+            <img src="https://images.unsplash.com/photo-1464941913535-1f37bfb72880?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Slice of cake on a saucer" width="1400" height="933" loading="lazy">
+            <div class="caption"><h3>Olive oil, orange</h3><p>Syrup while warm</p></div>
           </li>
           <li class="slide">
-            <img src="https://images.unsplash.com/photo-1536599524557-5f784dd53282?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Several slices of cake photographed from above" loading="lazy" width="1400" height="933">
-            <div class="caption"><h3>The whole counter</h3><p>Six or seven cakes a day. What's left at four goes half price.</p></div>
-          </li>
-          <li class="slide">
-            <img src="https://images.unsplash.com/photo-1464941913535-1f37bfb72880?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Slice of cake on a white saucer" loading="lazy" width="1400" height="933">
-            <div class="caption"><h3>Olive oil and orange</h3><p>Made with our own oil, syrup poured while it's still warm.</p></div>
+            <img src="https://images.unsplash.com/photo-1555689501-ca921e629309?fm=jpg&q=80&w=1400&auto=format&fit=crop" alt="Cake decorated with sprinkles" width="1400" height="933" loading="lazy">
+            <div class="caption"><h3>Birthdays</h3><p>A day's notice</p></div>
           </li>
         </ul>
       </div>
 
-      <button class="arrow prev" id="prev" type="button" aria-label="Previous cake">
+      <button class="arrow prev" id="prev" type="button" aria-label="Previous">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <button class="arrow next" id="next" type="button" aria-label="Next cake">
+      <button class="arrow next" id="next" type="button" aria-label="Next">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
 
@@ -98,67 +83,86 @@
     </div>
   </section>
 
-  <!-- ---------- menu ---------- -->
-  <section class="menu" id="menu" aria-labelledby="menu-heading">
-    <div class="menu-head">
-      <h2 id="menu-heading">Menu</h2>
-      <p class="menu-note">Prices are per slice unless we've said otherwise. Whole cakes need a day's notice.</p>
-    </div>
-
-    <div class="menu-body">
-      <div class="menu-col">
-        <h3 class="course">Cakes</h3>
-        <ul class="items">
-          <li><span class="item">Honey layer cake</span><span class="dotted"></span><span class="cost">₹190</span>
-            <p class="desc">Nine layers, burnt honey cream</p></li>
-          <li><span class="item">Dark chocolate</span><span class="dotted"></span><span class="cost">₹210</span>
-            <p class="desc">70% couverture, ganache, barely sweet</p></li>
-          <li><span class="item">Sour cherry</span><span class="dotted"></span><span class="cost">₹200</span>
-            <p class="desc">Stewed cherries, kirsch syrup</p></li>
-          <li><span class="item">Olive oil and orange</span><span class="dotted"></span><span class="cost">₹170</span>
-            <p class="desc">Syrup poured while warm</p></li>
-          <li><span class="item">Strawberry and cream</span><span class="dotted"></span><span class="cost">₹220</span>
-            <p class="desc">Only in season, ask first</p></li>
-        </ul>
-      </div>
-
-      <div class="menu-col">
-        <h3 class="course">From the oven</h3>
-        <ul class="items">
-          <li><span class="item">Country sourdough</span><span class="dotted"></span><span class="cost">₹180</span>
-            <p class="desc">Whole loaf, 30 hour ferment</p></li>
-          <li><span class="item">Seeded rye</span><span class="dotted"></span><span class="cost">₹220</span>
-            <p class="desc">Whole loaf, best sliced thin</p></li>
-          <li><span class="item">Butter croissant</span><span class="dotted"></span><span class="cost">₹90</span>
-            <p class="desc">Ninety a morning, then we stop</p></li>
-          <li><span class="item">Cardamom bun</span><span class="dotted"></span><span class="cost">₹70</span>
-            <p class="desc">Warm until about eleven</p></li>
-          <li><span class="item">Focaccia</span><span class="dotted"></span><span class="cost">₹120</span>
-            <p class="desc">Rosemary and salt, by the piece</p></li>
-        </ul>
-
-        <h3 class="course">To drink</h3>
-        <ul class="items">
-          <li><span class="item">Filter coffee</span><span class="dotted"></span><span class="cost">₹80</span></li>
-          <li><span class="item">Masala chai</span><span class="dotted"></span><span class="cost">₹60</span></li>
-        </ul>
-      </div>
+  <!-- gallery -->
+  <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading" class="reveal">Today</h2>
+    <div class="grid">
+      <figure class="tile reveal juggle">
+        <img src="https://images.unsplash.com/photo-1613323885373-6e91a09b598b?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Chocolate cake on a white plate" width="900" height="900" loading="lazy">
+        <figcaption>Chocolate</figcaption>
+      </figure>
+      <figure class="tile reveal juggle">
+        <img src="https://images.unsplash.com/photo-1565685715007-06f2c4c44d19?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Sliced strawberry cake" width="900" height="900" loading="lazy">
+        <figcaption>Strawberry</figcaption>
+      </figure>
+      <figure class="tile reveal juggle">
+        <img src="https://images.unsplash.com/photo-1722673353577-350697f89b31?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Piece of chocolate cake on a wooden plate" width="900" height="900" loading="lazy">
+        <figcaption>Fudge</figcaption>
+      </figure>
+      <figure class="tile reveal juggle">
+        <img src="https://images.unsplash.com/photo-1536599524557-5f784dd53282?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Several slices of cake from above" width="900" height="900" loading="lazy">
+        <figcaption>The lot</figcaption>
+      </figure>
+      <figure class="tile reveal juggle">
+        <img src="https://images.unsplash.com/photo-1541779972238-2c60cd11ffc5?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Slice of cake on a fork" width="900" height="900" loading="lazy">
+        <figcaption>By the slice</figcaption>
+      </figure>
+      <figure class="tile reveal juggle">
+        <img src="https://images.unsplash.com/photo-1609501967126-1a43c02f655c?fm=jpg&q=80&w=900&auto=format&fit=crop" alt="Hands holding a plate of strawberry cake" width="900" height="900" loading="lazy">
+        <figcaption>To go</figcaption>
+      </figure>
     </div>
   </section>
 
+  <!-- menu -->
+  <section class="menu" id="menu" aria-labelledby="menu-heading">
+    <h2 id="menu-heading" class="reveal">Menu</h2>
+
+    <ul class="items">
+      <li class="reveal">
+        <img class="thumb juggle" src="https://images.unsplash.com/photo-1712725213053-dad649077a02?fm=jpg&q=70&w=200&h=200&fit=crop" alt="" width="200" height="200" loading="lazy">
+        <span class="item">Honey layer</span><span class="cost">₹190</span>
+      </li>
+      <li class="reveal">
+        <img class="thumb juggle" src="https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?fm=jpg&q=70&w=200&h=200&fit=crop" alt="" width="200" height="200" loading="lazy">
+        <span class="item">Dark chocolate</span><span class="cost">₹210</span>
+      </li>
+      <li class="reveal">
+        <img class="thumb juggle" src="https://images.unsplash.com/photo-1582716401301-b2407dc7563d?fm=jpg&q=70&w=200&h=200&fit=crop" alt="" width="200" height="200" loading="lazy">
+        <span class="item">Sour cherry</span><span class="cost">₹200</span>
+      </li>
+      <li class="reveal">
+        <img class="thumb juggle" src="https://images.unsplash.com/photo-1464941913535-1f37bfb72880?fm=jpg&q=70&w=200&h=200&fit=crop" alt="" width="200" height="200" loading="lazy">
+        <span class="item">Olive oil, orange</span><span class="cost">₹170</span>
+      </li>
+      <li class="reveal">
+        <img class="thumb juggle" src="https://images.unsplash.com/photo-1551879400-111a9087cd86?fm=jpg&q=70&w=200&h=200&fit=crop" alt="" width="200" height="200" loading="lazy">
+        <span class="item">Strawberry cream</span><span class="cost">₹220</span>
+      </li>
+    </ul>
+
+    <ul class="items plain">
+      <li class="reveal"><span class="item">Sourdough loaf</span><span class="cost">₹180</span></li>
+      <li class="reveal"><span class="item">Seeded rye</span><span class="cost">₹220</span></li>
+      <li class="reveal"><span class="item">Croissant</span><span class="cost">₹90</span></li>
+      <li class="reveal"><span class="item">Cardamom bun</span><span class="cost">₹70</span></li>
+      <li class="reveal"><span class="item">Filter coffee</span><span class="cost">₹80</span></li>
+    </ul>
+  </section>
+
   <section class="visit" id="visit">
-    <div class="visit-panel">
+    <div class="reveal">
       <h2>Visit</h2>
-      <p class="address">14 Ganeshkhind Road<br>Shivajinagar, Pune 411005</p>
-      <p class="tel"><a href="tel:+912025530014">020 2553 0014</a></p>
+      <p>14 Ganeshkhind Road<br>Shivajinagar, Pune</p>
+      <p><a href="tel:+912025530014">020 2553 0014</a></p>
     </div>
-    <div class="visit-panel">
+    <div class="reveal">
       <h2>Hours</h2>
       <dl class="hours">
-        <dt>Tuesday to Friday</dt><dd>6:30 — 18:00</dd>
-        <dt>Saturday</dt><dd>6:30 — 16:00</dd>
-        <dt>Sunday</dt><dd>7:00 — 13:00</dd>
-        <dt>Monday</dt><dd>Closed. The oven rests.</dd>
+        <dt>Tue–Fri</dt><dd>6:30 — 18:00</dd>
+        <dt>Sat</dt><dd>6:30 — 16:00</dd>
+        <dt>Sun</dt><dd>7:00 — 13:00</dd>
+        <dt>Mon</dt><dd>Closed</dd>
       </dl>
     </div>
   </section>
@@ -166,7 +170,7 @@
 </main>
 
 <footer class="footer">
-  <p>Half Past Six, Pune. Baking daily since 2019. Photographs from Unsplash.</p>
+  <p>Half Past Six, Pune. Photographs from Unsplash.</p>
 </footer>
 
 <script src="script.js"></script>

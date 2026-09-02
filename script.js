@@ -1,38 +1,49 @@
-// Half Past Six — bake schedule highlight + cake carousel.
+// Half Past Six — carousel, scroll reveals, and the juggle-on-view wobble.
 
-(function scheduleHighlight() {
-  var list = document.getElementById("schedule");
-  var note = document.getElementById("schedule-note");
-  if (!list || !note) return;
+var REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function update() {
-    var items = Array.prototype.slice.call(list.querySelectorAll("li"));
-    if (!items.length) return;
 
-    var now = new Date();
-    var mins = now.getHours() * 60 + now.getMinutes();
-    var next = null;
+/* ---------- reveal + juggle ---------- */
 
-    items.forEach(function (li) {
-      li.classList.remove("next");
-      var at = parseInt(li.getAttribute("data-mins"), 10);
-      if (next === null && at >= mins) next = li;
-    });
+(function revealAndJuggle() {
+  var targets = Array.prototype.slice.call(document.querySelectorAll(".reveal, .juggle"));
+  if (!targets.length) return;
 
-    if (next) {
-      next.classList.add("next");
-      var name = next.querySelector(".loaf").textContent.trim();
-      var time = next.querySelector(".time").textContent.trim();
-      note.textContent = name + " is next, at " + time + ". Times shift by a few minutes — dough decides.";
-    } else {
-      note.textContent = "Today's baking is done. First loaves tomorrow at 6:30.";
-    }
+  // No observer support, or the visitor asked for less motion: just show everything.
+  if (REDUCED || !("IntersectionObserver" in window)) {
+    targets.forEach(function (el) { el.classList.add("in"); });
+    return;
   }
 
-  update();
-  setInterval(update, 60000);
+  function wobbleLater(el) {
+    // Let the reveal finish first, so the element is still before it wobbles.
+    setTimeout(function () {
+      el.classList.remove("wobble");
+      // Reflow so the animation can be retriggered on a later pass.
+      void el.offsetWidth;
+      el.classList.add("wobble");
+    }, 820);
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var el = entry.target;
+
+      if (entry.isIntersecting) {
+        el.classList.add("in");
+        if (el.classList.contains("juggle")) wobbleLater(el);
+      } else {
+        // Reset so it plays again next time it scrolls back into view.
+        el.classList.remove("wobble");
+      }
+    });
+  }, { threshold: 0.35, rootMargin: "0px 0px -40px 0px" });
+
+  targets.forEach(function (el) { io.observe(el); });
 })();
 
+
+/* ---------- cake carousel ---------- */
 
 (function cakeCarousel() {
   var root = document.getElementById("carousel");
@@ -48,9 +59,7 @@
   var index = 0;
   var timer = null;
   var DELAY = 5200;
-  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Build the dots from the slides that actually exist.
   slides.forEach(function (slide, i) {
     var b = document.createElement("button");
     b.type = "button";
@@ -81,7 +90,7 @@
   function step() { go(index + 1); }
 
   function start() {
-    if (reduced) return;
+    if (REDUCED) return;
     stop();
     timer = setInterval(step, DELAY);
   }
@@ -95,24 +104,20 @@
   if (next) next.addEventListener("click", function () { go(index + 1); restart(); });
   if (prev) prev.addEventListener("click", function () { go(index - 1); restart(); });
 
-  // Keyboard, once the carousel has focus somewhere inside it.
   root.addEventListener("keydown", function (e) {
     if (e.key === "ArrowRight") { go(index + 1); restart(); }
     if (e.key === "ArrowLeft") { go(index - 1); restart(); }
   });
 
-  // Pause while someone is actually looking at it.
   root.addEventListener("mouseenter", stop);
   root.addEventListener("mouseleave", start);
   root.addEventListener("focusin", stop);
   root.addEventListener("focusout", start);
 
-  // Stop cycling when the tab is in the background.
   document.addEventListener("visibilitychange", function () {
     if (document.hidden) stop(); else start();
   });
 
-  // Swipe on touch devices.
   var x0 = null;
   root.addEventListener("touchstart", function (e) {
     x0 = e.changedTouches[0].clientX;
